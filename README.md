@@ -1,7 +1,6 @@
-<h1 align="center" style="background-color:#00FEFE"><strong>텔레그램 봇이 원하는 정보를 알림을 보내준다!</strong></h3>
+<h1 align="center" style="background-color:#00FEFE"><strong>🔎 텔레그램 봇이 원하는 정보를 알림을 보내준다!</strong></h3>
 
-`#telegram-bot` `#python`
-
+`#python` `#telegram-bot` 
 
 # 🚦 1. 프로젝트 소개
 - 펭지뇽이 나에게 부탁한 텔레그램 알림봇
