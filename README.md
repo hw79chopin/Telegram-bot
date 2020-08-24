@@ -1,4 +1,4 @@
-<h1 align="center" style="background-color:#00FEFE"><strong>🔎 텔레그램 봇이 원하는 정보를 알림을 보내준다!</strong></h3>
+<h1 align="center" style="background-color:#00FEFE"><strong>🔎 텔레그램 봇이 원하는 정보를 알림으로 준다!</strong></h3>
 
 `#python` `#telegram-bot` 
 
