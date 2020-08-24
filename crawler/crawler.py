@@ -32,7 +32,7 @@ class Crawler:
 
                 # 세부정보로 들어가기
                 driver.find_element_by_xpath('//*[@id="container"]/div[2]/div/div[3]/ul/li[' + str(num+1) + ']').click()
-                
+
                 # 필요한 정보 모아주고
                 title = driver.find_elements_by_css_selector('#container > div.recruitViewWrap > div.recruitView_wrap > div.firstView.OfferViewWarp > div.offer_title_wrap > h2')[0].text
                 career = driver.find_elements_by_css_selector('#container > div.recruitViewWrap > div.recruitView_wrap > div.firstView.OfferViewWarp > div.TopDetailBox > div > div:nth-child(1) > div > table > tbody > tr:nth-child(1) > td.boxbody.td_blue')[0].text
@@ -44,7 +44,9 @@ class Crawler:
                 age = driver.find_elements_by_css_selector('#container > div.recruitViewWrap > div.recruitView_wrap > div.secondView > div.secondViewbody > div.recruit_wrap > div.ViewBodyContents > table > tbody > tr > td.offerTable_table2 > div > table > tbody > tr:nth-child(3) > td.tableRow_body')[0].text
                 url = driver.current_url
                 id_ = url.split('.php?ID=')[1]
-
+                driver.get(url.replace('OfferView', 'offerContens'))
+                content = driver.find_element_by_tag_name("body").text.strip()
+                    
                 # 저장하기
                 dict_temp['제목'] = title
                 dict_temp['경력'] = career
@@ -55,13 +57,15 @@ class Crawler:
                 dict_temp['성별'] = gender
                 dict_temp['나이'] = age
                 dict_temp['URL'] = url
+                dict_temp['세부사항'] = content
                 dict_info[id_] = dict_temp
                 driver.back()
-
+                driver.back()
+                
                 # 스크롤 이동
                 element = driver.find_element_by_xpath('//*[@id="container"]/div[2]/div/div[3]/ul/li[' + str(num+1) + ']')
                 driver.execute_script("arguments[0].scrollIntoView();", element)
-                
+
         driver.quit()
         data = dict_info.copy()
 
