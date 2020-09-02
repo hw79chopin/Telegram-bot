@@ -1,4 +1,4 @@
-<h1 align="center" style="background-color:#00FEFE"><strong>🔎 텔레그램 봇이 원하는 정보를 알림을 보내준다!</strong></h3>
+<h1 align="center" style="background-color:#00FEFE"><strong>🔎 텔레그램 봇이 원하는 정보를 알림으로 준다!</strong></h3>
 
 `#python` `#telegram-bot` 
 
@@ -50,6 +50,7 @@ for i in updates:
 
 ## 2-2. 크롤링 코드 만들기 (팜리쿠르트)
 - 필요한 정보를 크롤링하는 코드를 만들었다.
+- 이번 크롤링에서 특별했던 점은 원하는 text data가 iframe에 있는 형식이어서 그거 해결하는데 애먹었다.
 - 코드 전체보기 => [crawler.py code](https://github.com/hw79chopin/Telegram-bot/blob/master/crawler/crawler.py)
 
 ## 2-3. 크롤링 변동사항을 텔레그램으로 알림 보내기
