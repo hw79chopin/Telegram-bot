@@ -9,7 +9,7 @@ class Extractor:
     
     def todays_quote(self):
         idx = randint(1, self.df.shape[0]+1)
-        return idx, self.df.loc[idx]['신문이름. 책 제목. 화자'], self.df.loc[idx]['글귀']
+        return idx, self.df.loc[idx]['글귀'], self.df.loc[idx]['신문이름. 책 제목. 화자']
 
-    def update_starts(self, id):
+    def update_stars(self, id):
         stars = self.df.loc['']
